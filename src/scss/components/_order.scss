@@ -1,0 +1,61 @@
+.order {
+  padding: 87px 0;
+  background-color: var(--accent-color);
+  background-position: bottom center;
+  background-size: cover;
+
+  @include image-set("../img/procent");
+
+  &__container {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    padding-left: 60px;
+
+    grid-column: 5 span;
+    @include midle-tablet {
+      margin-bottom: 30px;
+      padding-left: 0;
+
+      grid-column: 12 span;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--light-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--light-color);
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+
+    grid-column: 7 span;
+    @include midle-tablet {
+      justify-content: flex-start;
+      padding-right: 0;
+
+      grid-column: 12 span;
+    }
+  }
+
+  &__form {
+    max-width: 500px;
+  }
+}

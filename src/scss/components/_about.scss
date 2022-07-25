@@ -1,0 +1,52 @@
+.about {
+  background-color: var(--light-color);
+
+  &__descr {
+    max-width: 892px;
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--dark-color);
+
+    &-highlight {
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    grid-column: 3 span;
+    @include midle-desktop {
+      grid-column: 6 span;
+    }
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__digit {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--accent-color);
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--text-color);
+  }
+}

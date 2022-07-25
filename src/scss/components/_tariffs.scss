@@ -1,0 +1,118 @@
+.tariffs {
+  padding-top: 0;
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    @include midle-tablet {
+      gap: 20px;
+    }
+    @include small-tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border: 1px solid rgba(20, 16, 36, .2);
+    border-radius: 20px;
+
+    grid-column: 4 span;
+    @include small-tablet {
+      grid-column: 8 span;
+    }
+
+    &--current {
+      border: 1px solid var(--dark-color);
+      background-color: var(--dark-color);
+      transform: scale(1.1);
+
+      @include midle-desktop {
+        transform: scale(1);
+      }
+
+      .tariffs__subtitle {
+        color: var(--light-color);
+      }
+
+      .tariffs__price {
+        color: var(--light-color);
+      }
+
+      .tariffs__descr {
+        color: var(--light-color);
+      }
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--dark-color);
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 3px;
+      margin-right: 10px;
+      background-color: currentColor;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 3px;
+      margin-left: 10px;
+      background-color: currentColor;
+    }
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--dark-color);
+    text-align: center;
+
+    @include midle-desktop {
+      font-size: 45px;
+    }
+    @include midle-tablet {
+      font-size: 32px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--dark-color);
+    text-align: center;
+  }
+
+  &__btn {
+    min-width: 100%;
+    margin-top: 60px;
+
+    @include midle-tablet {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+}
